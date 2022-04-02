@@ -1,0 +1,22 @@
+
+spring:
+  api:
+    mask:
+      config:
+        enabled: true
+        skip-uri:
+          - /not/user
+#        trust-ip:
+#          - 192.168.12.120
+        uri-type:
+          "[/uriType]": "*common"
+        class-definitions:
+          "[com.paimonx.maskexample.entity.Address]":
+            detailed: "common"
+          "[com.paimonx.maskexample.entity.User]":
+            name: "name"
+            idNo: "idno"
+            phone: "phone"
+            onceName: "*name"
+            age: "common"
+
